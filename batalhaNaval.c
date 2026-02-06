@@ -4,10 +4,59 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
 // Siga os comentários para implementar cada parte do desafio.
 
-int main() {
+int main()
+{
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
+
+    int tabuleiro[10][10];
+    // Inicia o tabuleiro
+
+    for (int i = 0; i < 10; i++)
+    {
+      
+        for (int j = 0; j < 10; j++)
+        {
+            tabuleiro[i][j] = 0;  
+        }
+       
+    }
+    // navio na  vertical
+    tabuleiro[2][3] = 3;
+    tabuleiro[2][4] = 3;
+    tabuleiro[2][5] = 3;
+
+    // navio na horizontalmente
+
+    tabuleiro[0][0] = 3;
+    tabuleiro[1][0] = 3;
+    tabuleiro[2][0] = 3;
+
+    printf("\n\n==================== Batalha Naval ==================== \n\n");
+
+    printf("  ");
+    char letras = 'A';
+    for (int n = 0; n < 10; n++)
+    {
+        printf("%3c", letras);
+        letras++;
+        /* code */
+    }
+    printf("\n");
+    for (int i = 0; i < 10; i++)
+    {
+        printf("%2d ", i + 1);
+        for (int j = 0; j < 10; j++)
+        {
+
+            printf("%2d ", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n\n======================================================= \n\n");
+
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
@@ -25,7 +74,7 @@ int main() {
     // 0 0 1 0 0
     // 0 1 1 1 0
     // 1 1 1 1 1
-    
+
     // Exemplo para habilidade em octaedro:
     // 0 0 1 0 0
     // 0 1 1 1 0
